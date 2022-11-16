@@ -17,8 +17,8 @@ public static class Program
 
         builder.RootComponents.RegisterCustomElement<PokemonCards>("pokemon-cards");
 
-        builder.RootComponents.RegisterForAngular<PokemonCards>();
-        builder.RootComponents.RegisterForAngular<PokemonGrid>();
+        builder.RootComponents.RegisterForModuleFederation<PokemonCards>();
+        builder.RootComponents.RegisterForModuleFederation<PokemonGrid>();
 
         builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
